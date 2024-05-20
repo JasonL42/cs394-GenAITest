@@ -1,10 +1,10 @@
 # Experience
 - Does the code work? If not, what's broken.
-    - The code works pretty well.
+    - The code works pretty well from a display / ui pov. It's doing team assignments using sorted pairs putting strictly least worked pairs together
 - How is the code better than what the team currently has?
-    - I like the fact that it used a dropdown to choose number of subgroups instead of the number input method we had.
+    - I like the fact that it used a dropdown to choose number of subgroups instead of the number input method we had used.
 - How is the code worse?
-    - I like our version of the algorithm a bit better.
+    - I like our version of the algorithm a bit better. 
 - How many tries did it take to get the code? Main struggles?
     - It didn't take too many tries to get the main part of it, like 2 or 3. Refining it took quite a few attempts though.
 - Overall impression of the experience
