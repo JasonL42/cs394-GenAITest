@@ -1,3 +1,16 @@
+# Experience
+- Does the code work? If not, what's broken.
+    - The code works pretty well.
+- How is the code better than what the team currently has?
+    - I like the fact that it used a dropdown to choose number of subgroups instead of the number input method we had.
+- How is the code worse?
+    - I like our version of the algorithm a bit better.
+- How many tries did it take to get the code? Main struggles?
+    - It didn't take too many tries to get the main part of it, like 2 or 3. Refining it took quite a few attempts though.
+- Overall impression of the experience
+    - It was certainly pretty efficient to just get something right off the bat.
+
+
 # React Vitest Template
 
 A starter template for building React apps with Vite. Includes Vitest for unit testing and
