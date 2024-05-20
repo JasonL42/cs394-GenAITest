@@ -48,6 +48,18 @@ const generateTeams = (roster, matrix, numTeams) => {
   return teams;
 };
 
+const calculateTeamHours = (team, matrix, roster) => {
+  let totalHours = 0;
+  for (let i = 0; i < team.length; i++) {
+    for (let j = i + 1; j < team.length; j++) {
+      const member1Index = roster.indexOf(team[i]);
+      const member2Index = roster.indexOf(team[j]);
+      totalHours += matrix[member1Index][member2Index];
+    }
+  }
+  return totalHours;
+};
+
 const TeamAssignment = ({ roster, timeMatrix }) => {
   const [teams, setTeams] = useState([]);
   const [numTeams, setNumTeams] = useState(2);
@@ -55,6 +67,12 @@ const TeamAssignment = ({ roster, timeMatrix }) => {
   const handleAssignTeams = () => {
     const newTeams = generateTeams(roster, timeMatrix, numTeams);
     setTeams(newTeams);
+
+    // Log the hours per team
+    newTeams.forEach((team, index) => {
+      const teamHours = calculateTeamHours(team, timeMatrix, roster);
+      console.log(`Team ${index + 1} Total Hours: ${teamHours}`);
+    });
   };
 
   return (

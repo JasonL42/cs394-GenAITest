@@ -1,24 +1,28 @@
-import { useState } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import TeamAssignment from './TeamAssignment';
 
-const roster = ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank'];
-const timeMatrix = [
-  [0, 10, 20, 30, 40, 50],
-  [10, 0, 15, 25, 35, 45],
-  [20, 15, 0, 5, 15, 25],
-  [30, 25, 5, 0, 10, 20],
-  [40, 35, 15, 10, 0, 5],
-  [50, 45, 25, 20, 5, 0]
-];
-
-const App = () => {
-  return (
-    <div className="app-container">
-      <TeamAssignment roster={roster} timeMatrix={timeMatrix} />
-    </div>
-  );
+// Generate a balanced and randomized time matrix
+const generateRandomTimeMatrix = (size) => {
+  const matrix = Array.from({ length: size }, () => Array(size).fill(0));
+  for (let i = 0; i < size; i++) {
+    for (let j = i + 1; j < size; j++) {
+      const randomTime = Math.floor(Math.random() * 50) + 1;
+      matrix[i][j] = randomTime;
+      matrix[j][i] = randomTime;
+    }
+  }
+  console.log(matrix);
+  return matrix;
 };
+
+const roster = ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank', 'Grace', 'Hank', 'Ivy'];
+const timeMatrix = generateRandomTimeMatrix(roster.length);
+
+const App = () => (
+  <div className="app-container">
+    <TeamAssignment roster={roster} timeMatrix={timeMatrix} />
+  </div>
+);
 
 export default App;
