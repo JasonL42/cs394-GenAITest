@@ -1,6 +1,8 @@
 # Experience
+- Briefly describe what the code is supposed to do.
+    - It's doing team assignments using sorted pairs putting strictly least worked pairs together and displaying the roster as well as the created teams and their members.
 - Does the code work? If not, what's broken.
-    - The code works pretty well from a display / ui pov. It's doing team assignments using sorted pairs putting strictly least worked pairs together
+    - The code works pretty well from a display / ui pov. It does create and display subgroupss properly.
 - How is the code better than what the team currently has?
     - I like the fact that it used a dropdown to choose number of subgroups instead of the number input method we had used.
 - How is the code worse?
